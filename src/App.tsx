@@ -1,11 +1,7 @@
-import './assets/css/App.css';
-import {
-  BrowserRouter as Router,
-  Routes,
-  Route,
-  Link
-} from "react-router-dom";
-import Demo from './demo';
+import "./assets/css/App.css";
+import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
+import Demo from "./demo";
+import Button from "@mui/material/Button";
 
 function App() {
   return (
@@ -26,9 +22,9 @@ function App() {
         </nav>
 
         <Routes>
-          <Route path='/about' element={<About/>} />
-          <Route path='/users' element={<Users/>} />
-          <Route path='/' element={<Demo/>} />
+          <Route path="/about" element={<About />} />
+          <Route path="/users" element={<Users />} />
+          <Route path="/" element={<Demo />} />
         </Routes>
       </div>
     </Router>
@@ -38,7 +34,11 @@ function App() {
 export default App;
 
 function About() {
-  return <h2>About</h2>;
+  return (
+    <div>
+      <Button variant="contained">Hello World</Button>
+    </div>
+  );
 }
 
 function Users() {
