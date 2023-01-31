@@ -5,6 +5,7 @@ import {
   Route,
   Link
 } from "react-router-dom";
+import Demo from './demo';
 
 function App() {
   return (
@@ -27,7 +28,7 @@ function App() {
         <Routes>
           <Route path='/about' element={<About/>} />
           <Route path='/users' element={<Users/>} />
-          <Route path='/' element={<Home/>} />
+          <Route path='/' element={<Demo/>} />
         </Routes>
       </div>
     </Router>
@@ -35,10 +36,6 @@ function App() {
 }
 
 export default App;
-
-function Home() {
-  return <h2>Home</h2>;
-}
 
 function About() {
   return <h2>About</h2>;
