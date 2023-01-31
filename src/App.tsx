@@ -34,6 +34,7 @@ function App() {
 export default App;
 
 function About() {
+  // ボタンを導入してみた
   return (
     <div>
       <Button variant="contained">Hello World</Button>
