@@ -19,6 +19,7 @@ import Card from "@mui/material/Card";
 import CardActions from "@mui/material/CardActions";
 import CardContent from "@mui/material/CardContent";
 import Button from "@mui/material/Button";
+import Demo from "./demo";
 
 const drawerWidth = 240;
 
@@ -178,6 +179,7 @@ export default function ResponsiveDrawer(props: Props) {
           <CardActions>
             <Button size="small">Learn More</Button>
           </CardActions>
+          <Demo />
         </Card>
       </Box>
     </Box>
