@@ -15,6 +15,10 @@ import MailIcon from "@mui/icons-material/Mail";
 import MenuIcon from "@mui/icons-material/Menu";
 import Toolbar from "@mui/material/Toolbar";
 import Typography from "@mui/material/Typography";
+import Card from "@mui/material/Card";
+import CardActions from "@mui/material/CardActions";
+import CardContent from "@mui/material/CardContent";
+import Button from "@mui/material/Button";
 
 const drawerWidth = 240;
 
@@ -59,6 +63,12 @@ export default function ResponsiveDrawer(props: Props) {
   );
 
   const container = window !== undefined ? () => window().document.body : undefined;
+
+  const bull = (
+    <Box component="span" sx={{ display: "inline-block", mx: "2px", transform: "scale(0.8)" }}>
+      •
+    </Box>
+  );
 
   return (
     <Box sx={{ display: "flex" }}>
@@ -148,6 +158,27 @@ export default function ResponsiveDrawer(props: Props) {
           elementum nisi quis eleifend. Commodo viverra maecenas accumsan lacus vel facilisis. Nulla posuere
           sollicitudin aliquam ultrices sagittis orci a.
         </Typography>
+        <Card variant="outlined" sx={{ minWidth: 275 }}>
+          <CardContent>
+            <Typography sx={{ fontSize: 14 }} color="text.secondary" gutterBottom>
+              Word of the Day
+            </Typography>
+            <Typography variant="h5" component="div">
+              be{bull}nev{bull}o{bull}lent
+            </Typography>
+            <Typography sx={{ mb: 1.5 }} color="text.secondary">
+              adjective
+            </Typography>
+            <Typography variant="body2">
+              well meaning and kindly.
+              <br />
+              {'"a benevolent smile"'}
+            </Typography>
+          </CardContent>
+          <CardActions>
+            <Button size="small">Learn More</Button>
+          </CardActions>
+        </Card>
       </Box>
     </Box>
   );
