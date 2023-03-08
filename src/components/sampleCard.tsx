@@ -5,6 +5,8 @@ import CardContent from "@mui/material/CardContent";
 import Button from "@mui/material/Button";
 import Typography from "@mui/material/Typography";
 import Box from "@mui/material/Box";
+import { useTranslation } from "react-i18next";
+import i18n from "i18next";
 
 const bull = (
   <Box component="span" sx={{ display: "inline-block", mx: "2px", transform: "scale(0.8)" }}>
@@ -13,6 +15,7 @@ const bull = (
 );
 
 export default function SampleCard() {
+  const { t } = useTranslation();
   return (
     <Card variant="outlined" sx={{ minWidth: 275 }}>
       <CardContent>
@@ -27,12 +30,28 @@ export default function SampleCard() {
         </Typography>
         <Typography variant="body2">
           well meaning and kindly.
+          {t("header.signin")}
           <br />
           {'"a benevolent smile"'}
         </Typography>
       </CardContent>
       <CardActions>
-        <Button size="small">Learn More</Button>
+        <Button
+          size="small"
+          onClick={() => {
+            i18n.changeLanguage("en");
+          }}
+        >
+          to en
+        </Button>
+        <Button
+          size="small"
+          onClick={() => {
+            i18n.changeLanguage("ja");
+          }}
+        >
+          to ja
+        </Button>
       </CardActions>
       <Demo />
     </Card>
