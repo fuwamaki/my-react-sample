@@ -5,14 +5,9 @@ import Toolbar from "@mui/material/Toolbar";
 import SampleCard from "components/sampleCard";
 import TopBar from "components/topBar";
 import EvDrawerBox from "components/evDrawerBox";
+import { fields } from "constants/fields";
 
-const drawerWidth = 240;
-
-interface Props {
-  window?: () => Window;
-}
-
-export default function ResponsiveDrawer(props: Props) {
+export default function ResponsiveDrawer() {
   const [mobileOpen, setMobileOpen] = React.useState(false);
 
   const handleDrawerToggle = () => {
@@ -23,13 +18,13 @@ export default function ResponsiveDrawer(props: Props) {
     <Box sx={{ display: "flex" }}>
       <CssBaseline />
       <TopBar handleDrawerToggle={handleDrawerToggle} />
-      <EvDrawerBox props={props} mobileOpen={mobileOpen} handleDrawerToggle={handleDrawerToggle} />
+      <EvDrawerBox props={{}} mobileOpen={mobileOpen} handleDrawerToggle={handleDrawerToggle} />
       <Box
         component="main"
         sx={{
           flexGrow: 1,
           p: 3,
-          width: { sm: `calc(100% - ${drawerWidth}px)` },
+          width: { sm: `calc(100% - ${fields.drawer.width}px)` },
         }}
       >
         <Toolbar />
