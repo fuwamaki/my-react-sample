@@ -1,6 +1,6 @@
 import { Box, Drawer } from "@mui/material";
 import { fields } from "constants/fields";
-import EvDrawer from "./evDrawer";
+import EvDrawer from "components/evDrawer";
 
 interface Props {
   window?: () => Window;
