@@ -1,4 +1,3 @@
-import Demo from "demo";
 import Card from "@mui/material/Card";
 import CardActions from "@mui/material/CardActions";
 import CardContent from "@mui/material/CardContent";
@@ -7,6 +6,7 @@ import Typography from "@mui/material/Typography";
 import Box from "@mui/material/Box";
 import { useTranslation } from "react-i18next";
 import i18n from "i18next";
+import SampleGraph from "components/sampleGraph";
 
 const bull = (
   <Box component="span" sx={{ display: "inline-block", mx: "2px", transform: "scale(0.8)" }}>
@@ -53,7 +53,7 @@ export default function SampleCard() {
           to ja
         </Button>
       </CardActions>
-      <Demo />
+      <SampleGraph />
     </Card>
   );
 }

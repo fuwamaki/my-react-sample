@@ -35,8 +35,8 @@ export const data = {
   ],
 };
 
-function Demo() {
+function SampleGraph() {
   return <Bar options={options} data={data} />;
 }
 
-export default Demo;
+export default SampleGraph;
