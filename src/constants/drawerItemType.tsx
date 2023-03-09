@@ -1,7 +1,7 @@
 import { AccountCircle, Add, FiberNew, Home, Newspaper, Settings, TrendingUp } from "@mui/icons-material";
 import i18next from "i18n/configs";
 
-export const DrawerItemType = {
+export const DRAWER_ITEM_TYPE = {
   HOME: { title: i18next.t("drawer.home"), path: "/", component: <Home /> },
   TREND: { title: i18next.t("drawer.trend"), path: "/trend", component: <TrendingUp /> },
   MEDIA: { title: i18next.t("drawer.media"), path: "/media", component: <Newspaper /> },
@@ -11,4 +11,4 @@ export const DrawerItemType = {
   SETTINGS: { title: i18next.t("drawer.settings"), path: "/settings", component: <Settings /> },
 } as const;
 
-export type DrawerItemType = typeof DrawerItemType[keyof typeof DrawerItemType];
+export type DrawerItemType = typeof DRAWER_ITEM_TYPE[keyof typeof DRAWER_ITEM_TYPE];
