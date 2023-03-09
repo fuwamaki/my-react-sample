@@ -14,22 +14,9 @@ import MenuIcon from "@mui/icons-material/Menu";
 import Toolbar from "@mui/material/Toolbar";
 import Typography from "@mui/material/Typography";
 import SampleCard from "components/sampleCard";
-import { AccountCircle, Add, FiberNew, Home, Newspaper, Settings, TrendingUp } from "@mui/icons-material";
-import i18next from "i18n/configs";
+import { DrawerItemType } from "constants/drawerItemType";
 
 const drawerWidth = 240;
-
-const DrawerItemType = {
-  HOME: { title: i18next.t("drawer.home"), path: "home", component: <Home /> },
-  TREND: { title: i18next.t("drawer.trend"), path: "trend", component: <TrendingUp /> },
-  MEDIA: { title: i18next.t("drawer.media"), path: "media", component: <Newspaper /> },
-  NEWLY: { title: i18next.t("drawer.newly"), path: "newly", component: <FiberNew /> },
-  POST_QUESTION: { title: i18next.t("drawer.postQuestion"), path: "post_question", component: <Add /> },
-  MYPAGE: { title: i18next.t("drawer.mypage"), path: "mypage", component: <AccountCircle /> },
-  SETTINGS: { title: i18next.t("drawer.settings"), path: "settings", component: <Settings /> },
-} as const;
-
-type DrawerItemType = typeof DrawerItemType[keyof typeof DrawerItemType];
 
 interface Props {
   window?: () => Window;
