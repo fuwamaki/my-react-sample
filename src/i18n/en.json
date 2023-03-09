@@ -1,5 +1,14 @@
 {
   "header": {
     "signin": "Signin"
+  },
+  "drawer": {
+    "home": "Home",
+    "trend": "Trend",
+    "media": "media",
+    "newly": "Newly",
+    "postQuestion": "Post Question",
+    "mypage": "Mypage",
+    "settings": "Settings"
   }
 }

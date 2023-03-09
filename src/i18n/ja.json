@@ -1,5 +1,14 @@
 {
   "header": {
     "signin": "ログイン"
+  },
+  "drawer": {
+    "home": "ホーム",
+    "trend": "トレンド",
+    "media": "メディア",
+    "newly": "新着",
+    "postQuestion": "質問を投稿",
+    "mypage": "マイページ",
+    "settings": "設定"
   }
 }
