@@ -1,22 +1,14 @@
-import * as React from "react";
 import { AppBar, Toolbar, IconButton, Typography } from "@mui/material";
 import MenuIcon from "@mui/icons-material/Menu";
+import { fields } from "constants/fields";
 
-const drawerWidth = 240;
-
-export default function TopBar() {
-  const [mobileOpen, setMobileOpen] = React.useState(false);
-
-  const handleDrawerToggle = () => {
-    setMobileOpen(!mobileOpen);
-  };
-
+export default function TopBar({ handleDrawerToggle }: { handleDrawerToggle: () => void }) {
   return (
     <AppBar
       position="fixed"
       sx={{
-        width: { sm: `calc(100% - ${drawerWidth}px)` },
-        ml: { sm: `${drawerWidth}px` },
+        width: { sm: `calc(100% - ${fields.drawer.width}px)` },
+        ml: { sm: `${fields.drawer.width}px` },
       }}
     >
       <Toolbar>
