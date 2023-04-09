@@ -1,8 +1,21 @@
-import { AppBar, Toolbar, IconButton, Typography } from "@mui/material";
+import { AppBar, Toolbar, IconButton, Typography, useTheme } from "@mui/material";
 import MenuIcon from "@mui/icons-material/Menu";
 import { fields } from "constants/fields";
+import React from "react";
+import Brightness4Icon from "@mui/icons-material/Brightness4";
+import Brightness7Icon from "@mui/icons-material/Brightness7";
 
-export default function TopBar({ handleDrawerToggle }: { handleDrawerToggle: () => void }) {
+const ColorModeContext = React.createContext({ toggleColorMode: () => {} });
+
+export default function TopBar({
+  handleDrawerToggle,
+  handleDarkModeToggle,
+}: {
+  handleDrawerToggle: () => void;
+  handleDarkModeToggle: () => void;
+}) {
+  const theme = useTheme();
+
   return (
     <AppBar
       position="fixed"
@@ -24,6 +37,9 @@ export default function TopBar({ handleDrawerToggle }: { handleDrawerToggle: () 
         <Typography variant="h6" noWrap component="div">
           Title
         </Typography>
+        <IconButton sx={{ ml: 1 }} onClick={handleDarkModeToggle} color="inherit">
+          {theme.palette.mode === "dark" ? <Brightness7Icon /> : <Brightness4Icon />}
+        </IconButton>
       </Toolbar>
     </AppBar>
   );
