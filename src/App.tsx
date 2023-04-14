@@ -35,12 +35,11 @@ function App() {
         main: darkMode ? "#E53F3F" : "#E53F3F",
       },
       text: {
-        primary: darkMode ? "#282E37" : "#FFFFFF",
-        secondary: darkMode ? "#727E90" : "#EDF4FF",
+        primary: darkMode ? "#FFFFFF" : "#282E37",
+        secondary: darkMode ? "#EDF4FF" : "#727E90",
       },
       background: {
-        default: darkMode ? "#FFFFFF" : "#282E37",
-        paper: darkMode ? "#EDF4FF" : "#727E90",
+        default: darkMode ? "#282E37" : "#FFFFFF",
       },
     },
     typography: {
