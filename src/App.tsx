@@ -23,6 +23,25 @@ function App() {
   const theme = createTheme({
     palette: {
       mode: darkMode ? "dark" : "light",
+      primary: {
+        light: darkMode ? "#D4E5FF" : "#D4E5FF",
+        main: darkMode ? "#5F9AF1" : "#5F9AF1",
+      },
+      secondary: {
+        main: darkMode ? "#7FD4EF" : "#7FD4EF",
+      },
+      divider: darkMode ? "#B9C3D1" : "#B9C3D1",
+      error: {
+        main: darkMode ? "#E53F3F" : "#E53F3F",
+      },
+      text: {
+        primary: darkMode ? "#282E37" : "#FFFFFF",
+        secondary: darkMode ? "#727E90" : "#EDF4FF",
+      },
+      background: {
+        default: darkMode ? "#FFFFFF" : "#282E37",
+        paper: darkMode ? "#EDF4FF" : "#727E90",
+      },
     },
     typography: {
       fontFamily: [
