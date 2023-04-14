@@ -1,7 +1,6 @@
 import { AppBar, Toolbar, IconButton, Typography, useTheme } from "@mui/material";
 import MenuIcon from "@mui/icons-material/Menu";
 import { fields } from "constants/fields";
-import React from "react";
 import Brightness4Icon from "@mui/icons-material/Brightness4";
 import Brightness7Icon from "@mui/icons-material/Brightness7";
 

@@ -1,3 +1,10 @@
+import QuestionCard from "components/questionCard";
+
 export default function TrendPage() {
-  return <h2>Trend</h2>;
+  return (
+    <div>
+      <h2>Trend</h2>
+      <QuestionCard />
+    </div>
+  );
 }
