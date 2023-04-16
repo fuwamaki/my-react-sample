@@ -30,7 +30,7 @@ function App() {
       secondary: {
         main: darkMode ? "#7FD4EF" : "#7FD4EF",
       },
-      divider: darkMode ? "#B9C3D1" : "#B9C3D1",
+      divider: darkMode ? "#8D949E" : "#B9C3D1",
       error: {
         main: darkMode ? "#E53F3F" : "#E53F3F",
       },

@@ -4,6 +4,9 @@ import Card from "@mui/material/Card";
 import CardContent from "@mui/material/CardContent";
 import Button from "@mui/material/Button";
 import Typography from "@mui/material/Typography";
+import SvgIcon from "@mui/material/SvgIcon";
+import { ReactComponent as ShareSvg } from "../assets/img/share.svg";
+import CommentIcon from "../assets/img/comment.png";
 
 export default function QuestionCard() {
   return (
@@ -26,6 +29,14 @@ export default function QuestionCard() {
             <Button variant="outlined" fullWidth sx={{ mt: 1 }}>
               比べた経験がない
             </Button>
+            <Typography paragraph color="text.secondary" variant="caption">
+              あと16時間
+            </Typography>
+            <Typography paragraph color="text.secondary" variant="caption">
+              55票
+            </Typography>
+            <SvgIcon component={ShareSvg} />
+            <img src={CommentIcon} width={24} />
           </CardContent>
         </React.Fragment>
       </Card>
