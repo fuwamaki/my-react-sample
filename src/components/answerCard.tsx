@@ -30,6 +30,9 @@ export default function AnswerCard() {
                 title: {
                   display: false, // グラフタイトルを非表示
                 },
+                tooltip: {
+                  enabled: false, // マウスオーバー時のツールチップを非表示
+                },
               },
               scales: {
                 x: {
