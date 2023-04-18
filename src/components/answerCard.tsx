@@ -1,16 +1,7 @@
 import Box from "@mui/material/Box";
 import Card from "@mui/material/Card";
 import CardContent from "@mui/material/CardContent";
-import {
-  Chart as ChartJS,
-  CategoryScale,
-  LinearScale,
-  BarElement,
-  Title,
-  Tooltip,
-  Legend,
-  ChartOptions,
-} from "chart.js";
+import { Chart as ChartJS, CategoryScale, LinearScale, BarElement, Title, Tooltip, Legend } from "chart.js";
 import { Bar } from "react-chartjs-2";
 import { faker } from "@faker-js/faker";
 import { Typography, useTheme } from "@mui/material";
@@ -34,21 +25,17 @@ export const options = {
         display: false,
       },
       ticks: {
-        color: "red",
-        showLabelBackdrop: true,
+        display: false,
       },
     },
     y: {
       ticks: {
-        color: "red",
+        color: "blue",
+        mirror: true, // 横棒の内側にラベルを表示
+        z: 1, // ラベルを横棒の手前に表示
       },
     },
   },
-  //   scales: {
-  //     x: {
-  //
-  //     },
-  //   },
 };
 
 const labels = ["出社", "在宅", "変わらない", "比べた経験がない"];
