@@ -8,49 +8,47 @@ import { Typography, useTheme } from "@mui/material";
 
 ChartJS.register(CategoryScale, LinearScale, BarElement, Title, Tooltip, Legend);
 
-export const options = {
-  indexAxis: "y" as const,
-  responsive: true,
-  plugins: {
-    legend: {
-      display: false,
-    },
-    title: {
-      display: false,
-    },
-  },
-  scales: {
-    x: {
-      grid: {
-        display: false,
-      },
-      ticks: {
-        display: false,
-      },
-    },
-    y: {
-      ticks: {
-        color: "blue",
-        mirror: true, // 横棒の内側にラベルを表示
-        z: 1, // ラベルを横棒の手前に表示
-      },
-    },
-  },
-};
-
-const labels = ["出社", "在宅", "変わらない", "比べた経験がない"];
-
 export default function AnswerCard() {
   const theme = useTheme();
+  const labels = ["出社", "在宅", "変わらない", "比べた経験がない"];
   const data = {
     labels,
     datasets: [
       {
         label: "Dataset 1",
         data: labels.map(() => faker.datatype.number({ min: 0, max: 1000 })),
-        backgroundColor: theme.palette.primary.main,
+        backgroundColor: theme.palette.primary.light,
       },
     ],
+  };
+  const options = {
+    indexAxis: "y" as const,
+    responsive: true,
+    plugins: {
+      legend: {
+        display: false,
+      },
+      title: {
+        display: false,
+      },
+    },
+    scales: {
+      x: {
+        grid: {
+          display: false,
+        },
+        ticks: {
+          display: false,
+        },
+      },
+      y: {
+        ticks: {
+          color: theme.palette.text.primary,
+          mirror: true, // 横棒の内側にラベルを表示
+          z: 1, // ラベルを横棒の手前に表示
+        },
+      },
+    },
   };
   return (
     <Box sx={{ maxWidth: 300 }}>
