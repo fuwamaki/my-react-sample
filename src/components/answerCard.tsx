@@ -22,26 +22,35 @@ export default function AnswerCard() {
     ],
   };
   const options = {
-    indexAxis: "y" as const,
+    indexAxis: "y" as const, // 横棒グラフにする
     responsive: true,
     plugins: {
       legend: {
-        display: false,
+        display: false, // 凡例を非表示
       },
       title: {
-        display: false,
+        display: false, // グラフタイトルを非表示
       },
     },
     scales: {
       x: {
         grid: {
-          display: false,
+          display: false, // 横棒のグリッド（縦線たち）を非表示
         },
         ticks: {
-          display: false,
+          display: false, // 横棒のラベルを非表示
+        },
+        border: {
+          display: false, // 横棒の軸線（横線）を非表示
         },
       },
       y: {
+        grid: {
+          display: false, // 縦棒のグリッド（横線たち）を非表示
+        },
+        border: {
+          display: false, // 縦軸の軸線（縦線）を非表示
+        },
         ticks: {
           color: theme.palette.text.primary,
           mirror: true, // 横棒の内側にラベルを表示
