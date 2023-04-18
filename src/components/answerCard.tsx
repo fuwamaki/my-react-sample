@@ -1,3 +1,6 @@
+import Box from "@mui/material/Box";
+import Card from "@mui/material/Card";
+import CardContent from "@mui/material/CardContent";
 import { Chart as ChartJS, CategoryScale, LinearScale, BarElement, Title, Tooltip, Legend } from "chart.js";
 import { Bar } from "react-chartjs-2";
 import { faker } from "@faker-js/faker";
@@ -35,9 +38,14 @@ export const data = {
   ],
 };
 
-// TODO: 削除予定
-function SampleGraph() {
-  return <Bar options={options} data={data} />;
+export default function AnswerCard() {
+  return (
+    <Box sx={{ maxWidth: 300 }}>
+      <Card variant="outlined">
+        <CardContent>
+          <Bar options={options} data={data} />;
+        </CardContent>
+      </Card>
+    </Box>
+  );
 }
-
-export default SampleGraph;

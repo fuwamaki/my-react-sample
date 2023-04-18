@@ -14,6 +14,7 @@ const bull = (
   </Box>
 );
 
+// TODO: 削除予定
 export default function SampleCard() {
   const { t } = useTranslation();
   return (
