@@ -23,6 +23,9 @@ export default function AnswerCard() {
               indexAxis: "y" as const, // 横棒グラフにする
               responsive: true,
               aspectRatio: 1.25,
+              layout: {
+                padding: -24, // 左側の余白をなくす
+              },
               plugins: {
                 legend: {
                   display: false, // 凡例を非表示
