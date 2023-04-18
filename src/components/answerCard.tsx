@@ -53,6 +53,7 @@ export default function AnswerCard() {
                     color: theme.palette.text.primary,
                     mirror: true, // 横棒の内側にラベルを表示
                     z: 1, // ラベルを横棒の手前に表示
+                    padding: 8, // ラベルと横棒の間隔
                   },
                 },
               },
@@ -64,6 +65,9 @@ export default function AnswerCard() {
                   label: "Dataset 1",
                   data: labels.map(() => faker.datatype.number({ min: 0, max: 1000 })),
                   backgroundColor: theme.palette.primary.light,
+                  barPercentage: 1, // 棒グラフの幅を100%にする
+                  borderRadius: Number.MAX_VALUE, // 棒グラフの角を丸くする
+                  borderSkipped: false, // 棒グラフの左端側も角を丸くする
                 },
               ],
             }}
