@@ -36,7 +36,7 @@ export default function QuestionCard() {
               </Typography>
             </Grid>
             <Grid item>
-              <Stack direction="row">
+              <Stack direction="row" spacing={0.4}>
                 <Typography paragraph color="text.secondary" variant="caption">
                   55票
                 </Typography>
