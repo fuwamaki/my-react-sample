@@ -11,54 +11,6 @@ ChartJS.register(CategoryScale, LinearScale, BarElement, Title, Tooltip, Legend)
 export default function AnswerCard() {
   const theme = useTheme();
   const labels = ["出社", "在宅", "変わらない", "比べた経験がない"];
-  const data = {
-    labels,
-    datasets: [
-      {
-        label: "Dataset 1",
-        data: labels.map(() => faker.datatype.number({ min: 0, max: 1000 })),
-        backgroundColor: theme.palette.primary.light,
-      },
-    ],
-  };
-  const options = {
-    indexAxis: "y" as const, // 横棒グラフにする
-    responsive: true,
-    plugins: {
-      legend: {
-        display: false, // 凡例を非表示
-      },
-      title: {
-        display: false, // グラフタイトルを非表示
-      },
-    },
-    scales: {
-      x: {
-        grid: {
-          display: false, // 横棒のグリッド（縦線たち）を非表示
-        },
-        ticks: {
-          display: false, // 横棒のラベルを非表示
-        },
-        border: {
-          display: false, // 横棒の軸線（横線）を非表示
-        },
-      },
-      y: {
-        grid: {
-          display: false, // 縦棒のグリッド（横線たち）を非表示
-        },
-        border: {
-          display: false, // 縦軸の軸線（縦線）を非表示
-        },
-        ticks: {
-          color: theme.palette.text.primary,
-          mirror: true, // 横棒の内側にラベルを表示
-          z: 1, // ラベルを横棒の手前に表示
-        },
-      },
-    },
-  };
   return (
     <Box sx={{ maxWidth: 300 }}>
       <Card variant="outlined">
@@ -66,7 +18,56 @@ export default function AnswerCard() {
           <Typography variant="body2" sx={{ mb: 2 }}>
             仕事は出社と在宅、どちらの方が集中できる？
           </Typography>
-          <Bar options={options} data={data} />
+          <Bar
+            options={{
+              indexAxis: "y" as const, // 横棒グラフにする
+              responsive: true,
+              plugins: {
+                legend: {
+                  display: false, // 凡例を非表示
+                },
+                title: {
+                  display: false, // グラフタイトルを非表示
+                },
+              },
+              scales: {
+                x: {
+                  grid: {
+                    display: false, // 横棒のグリッド（縦線たち）を非表示
+                  },
+                  ticks: {
+                    display: false, // 横棒のラベルを非表示
+                  },
+                  border: {
+                    display: false, // 横棒の軸線（横線）を非表示
+                  },
+                },
+                y: {
+                  grid: {
+                    display: false, // 縦棒のグリッド（横線たち）を非表示
+                  },
+                  border: {
+                    display: false, // 縦軸の軸線（縦線）を非表示
+                  },
+                  ticks: {
+                    color: theme.palette.text.primary,
+                    mirror: true, // 横棒の内側にラベルを表示
+                    z: 1, // ラベルを横棒の手前に表示
+                  },
+                },
+              },
+            }}
+            data={{
+              labels,
+              datasets: [
+                {
+                  label: "Dataset 1",
+                  data: labels.map(() => faker.datatype.number({ min: 0, max: 1000 })),
+                  backgroundColor: theme.palette.primary.light,
+                },
+              ],
+            }}
+          />
         </CardContent>
       </Card>
     </Box>
