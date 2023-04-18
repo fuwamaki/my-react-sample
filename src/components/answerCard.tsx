@@ -73,7 +73,8 @@ export default function AnswerCard() {
                   data: labels.map(() => faker.datatype.number({ min: 0, max: 1000 })),
                   backgroundColor: theme.palette.primary.light,
                   barPercentage: 1, // 棒グラフの幅を100%にする
-                  borderRadius: Number.MAX_VALUE, // 棒グラフの角を丸くする
+                  //   borderRadius: Number.MAX_VALUE, // 棒グラフの角を丸くする
+                  borderRadius: 8, // 棒グラフの角を丸くする
                   borderSkipped: false, // 棒グラフの左端側も角を丸くする
                   barThickness: 30, // 棒グラフの太さを16pxにする
                 },
