@@ -22,6 +22,7 @@ export default function AnswerCard() {
             options={{
               indexAxis: "y" as const, // 横棒グラフにする
               responsive: true,
+              aspectRatio: 1.25,
               plugins: {
                 legend: {
                   display: false, // 凡例を非表示
@@ -68,6 +69,7 @@ export default function AnswerCard() {
                   barPercentage: 1, // 棒グラフの幅を100%にする
                   borderRadius: Number.MAX_VALUE, // 棒グラフの角を丸くする
                   borderSkipped: false, // 棒グラフの左端側も角を丸くする
+                  barThickness: 30, // 棒グラフの太さを16pxにする
                 },
               ],
             }}
