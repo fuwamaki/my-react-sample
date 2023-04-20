@@ -1,7 +1,6 @@
 import { Stack } from "@mui/material";
 import AnswerCard from "components/answerCard";
 import QuestionCard from "components/questionCard";
-import SampleCard from "components/sampleCard";
 
 export default function TrendPage() {
   return (
@@ -10,7 +9,6 @@ export default function TrendPage() {
       <Stack direction="row" spacing={2}>
         <QuestionCard />
         <AnswerCard />
-        <SampleCard />
       </Stack>
     </div>
   );

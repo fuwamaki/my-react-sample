@@ -40,21 +40,21 @@ export default function AnswerCard() {
               scales: {
                 x: {
                   grid: {
-                    display: false, // 横棒のグリッド（縦線たち）を非表示
+                    display: false, // 横軸のグリッド（縦線たち）を非表示
                   },
                   ticks: {
-                    display: false, // 横棒のラベルを非表示
+                    display: false, // 横軸のラベルを非表示
                   },
                   border: {
-                    display: false, // 横棒の軸線（横線）を非表示
+                    display: false, // 横軸の線を非表示
                   },
                 },
                 y: {
                   grid: {
-                    display: false, // 縦棒のグリッド（横線たち）を非表示
+                    display: false, // 縦軸のグリッド（横線たち）を非表示
                   },
                   border: {
-                    display: false, // 縦軸の軸線（縦線）を非表示
+                    display: false, // 縦軸の線を非表示
                   },
                   ticks: {
                     color: theme.palette.text.primary,
