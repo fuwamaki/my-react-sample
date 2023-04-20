@@ -5,8 +5,9 @@ import { Chart as ChartJS, CategoryScale, LinearScale, BarElement, Title, Toolti
 import { Bar } from "react-chartjs-2";
 import { faker } from "@faker-js/faker";
 import { Typography, useTheme } from "@mui/material";
+import ChartDataLabels from "chartjs-plugin-datalabels";
 
-ChartJS.register(CategoryScale, LinearScale, BarElement, Title, Tooltip, Legend);
+ChartJS.register(CategoryScale, LinearScale, BarElement, Title, Tooltip, Legend, ChartDataLabels);
 
 export default function AnswerCard() {
   const theme = useTheme();
@@ -35,6 +36,11 @@ export default function AnswerCard() {
                 },
                 tooltip: {
                   enabled: false, // マウスオーバー時のツールチップを非表示
+                },
+                datalabels: {
+                  anchor: "start" as const,
+                  align: "end" as const,
+                  offset: 232,
                 },
               },
               scales: {
